@@ -21,6 +21,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'onsails/lspkind.nvim'
 
 call plug#end()
 
@@ -33,7 +34,7 @@ lua require("lualine-config")
 lua require("bufferline-config")
 lua require("treesitter-config")
 lua require("telescope-config")
-lua require("cmp-config")
+lua require("lsp")
 lua require("autopairs-config")
 lua require("whichkey-config")
 lua <<EOF
