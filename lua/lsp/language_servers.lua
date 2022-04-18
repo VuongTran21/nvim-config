@@ -1,18 +1,25 @@
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require('lspconfig').html.setup {
-  capabilities = capabilities
+local languageservers = {
+  'html',
+  'cssls',
+  'tsserver',
+  'pyright'
 }
 
-require'lspconfig'.cssls.setup {
-  capabilities = capabilities,
-}
+for _, server in ipairs(languageservers) do
+  require'lspconfig'[server].setup {
+    capabilities = capabilities
+  }
+end
 
-require'lspconfig'.tsserver.setup{
-  capabilities = capabilitiesl,
-}
+-- npm install -g emmet-ls
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'lspconfig'.pyright.setup{
-  capabilities = capabilities,
-}
-
+require'lspconfig'.emmet_ls.setup({
+    -- on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "html", "css", "typescriptreact", "javascriptreact" },
+})
