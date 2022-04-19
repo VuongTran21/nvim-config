@@ -26,16 +26,18 @@ Plug 'onsails/lspkind.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lewis6991/gitsigns.nvim'
 
+Plug 'sbdchd/neoformat'
+
 call plug#end()
 
 colorscheme gruvbox
 
 lua require("options")
 lua require("keybindings")
+lua require("treesitter-config")
 lua require("nvim-tree-config")
 lua require("lualine-config")
 lua require("bufferline-config")
-lua require("treesitter-config")
 lua require("telescope-config")
 lua require("colorizer-config")
 lua require("gitsigns-config")
