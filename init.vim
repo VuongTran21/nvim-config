@@ -23,6 +23,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'onsails/lspkind.nvim'
+Plug 'terrortylor/nvim-comment'
 
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lewis6991/gitsigns.nvim'
@@ -42,6 +43,7 @@ lua require("bufferline-config")
 lua require("telescope-config")
 lua require("colorizer-config")
 lua require("gitsigns-config")
+lua require("nvim-comment")
 lua require("lsp")
 lua require("autopairs-config")
 lua require("whichkey-config")
