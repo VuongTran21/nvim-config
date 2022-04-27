@@ -10,6 +10,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'p00f/nvim-ts-rainbow'
 Plug 'windwp/nvim-autopairs'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'folke/which-key.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
@@ -39,6 +40,7 @@ lua require("keybindings")
 lua require("treesitter-config")
 lua require("nvim-tree-config")
 lua require("lualine-config")
+lua require("indent-blankline-config")
 lua require("bufferline-config")
 lua require("telescope-config")
 lua require("colorizer-config")

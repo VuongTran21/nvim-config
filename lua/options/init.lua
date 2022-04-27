@@ -36,3 +36,5 @@ vim.bo.expandtab = true
 vim.g.neoformat_try_node_exe = true
 vim.g.noswapfile = true
 vim.g.modifiable = true
+vim.opt.list = true
+vim.opt.listchars:append("eol:↴")
