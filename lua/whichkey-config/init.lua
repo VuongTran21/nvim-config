@@ -23,9 +23,9 @@ local mappings = {
     R = {'<cmd>lua vim.lsp.buf.rename()<CR>', "Rename"},
     a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', "Code Action"},
     f = {'<cmd>lua vim.lsp.buf.formatting()<CR>', "Format code"},
-    -- e = {'<cmd>Lspsaga show_line_diagnostics<cr>', "Show Line Diagnostics"},
-    -- n = {'<cmd>Lspsaga diagnostic_jump_next<cr>', "Go To Next Diagnostic"},
-    -- N = {'<cmd>Lspsaga diagnostic_jump_prev<cr>', "Go To Previous Diagnostic"}
+    e = {'<cmd>lua vim.diagnostic.open_float()<CR>', "Show Line Diagnostics"},
+    n = {'<cmd>lua vim.diagnostic.goto_prev()<CR>', "Go To Next Diagnostic"},
+    N = {'<cmd>lua vim.diagnostic.goto_next()<CR>', "Go To Previous Diagnostic"}
   }
 }
 
