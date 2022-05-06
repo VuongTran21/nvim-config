@@ -15,7 +15,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "javascript", "html", "typescript", "lua" },
+  ensure_installed = "all",
 
   highlight = {
     enable = true,
