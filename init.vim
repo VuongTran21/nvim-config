@@ -27,6 +27,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'onsails/lspkind.nvim'
 Plug 'terrortylor/nvim-comment'
 
+Plug 'akinsho/toggleterm.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lewis6991/gitsigns.nvim'
 
@@ -48,6 +49,7 @@ lua require("colorizer-config")
 lua require("gitsigns-config")
 lua require("nvim-comment")
 lua require("lsp")
+lua require("toggle-term")
 lua require("autopairs-config")
 lua require("whichkey-config")
 lua <<EOF
