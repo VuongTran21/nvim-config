@@ -5,7 +5,22 @@ local languageservers = {
   'html',
   'cssls',
   'tsserver',
-  'pyright'
+  'pyright',
+  'intelephense',
+  'emmet_ls',
+  'angularls',
+  'eslint',
+  'graphql',
+  'jsonls',
+  'java_language_server',
+  'sqlls',
+  'svelte',
+  'tailwindcss',
+  'terraform_lsp',
+  'vimls',
+  'vuels',
+  'bashls',
+  'dockerls'
 }
 
 for _, server in ipairs(languageservers) do
@@ -14,12 +29,3 @@ for _, server in ipairs(languageservers) do
   }
 end
 
--- npm install -g emmet-ls
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-require'lspconfig'.emmet_ls.setup({
-    -- on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { "html", "css", "typescriptreact", "javascriptreact" },
-})
