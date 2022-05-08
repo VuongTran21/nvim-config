@@ -1,13 +1,11 @@
-local capabilites = require('cmp_nvim_lsp').update_capabilites(vim.lsp.protocol.make_client_capabitiles())
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local os_name = vim.loop.os_uname().sysname
-local system_name = 'mac'
 
-if(os_name == 'Darwin')
-then
+if(os_name == 'Darwin') then
   system_name = 'mac'
-elseif (os_name == 'Linux')
+elseif (os_name == 'Linux') then
   system_name = 'linux'
 end
 
@@ -27,7 +25,7 @@ local config = {
   },
 
   root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
-  capabilites = capabilites
+  capabilities = capabilities
 }
 
 require('jdtls').start_or_attach(config)
