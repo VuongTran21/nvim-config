@@ -28,6 +28,8 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'onsails/lspkind.nvim'
 Plug 'terrortylor/nvim-comment'
 
+Plug 'mfussenegger/nvim-jdtls'
+
 Plug 'akinsho/toggleterm.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lewis6991/gitsigns.nvim'
@@ -55,6 +57,7 @@ lua require("autopairs-config")
 lua require("whichkey-config")
 lua <<EOF
     print('hello from lua')
+    print(vim.loop.os_uname().sysname)
 EOF
 
 vnoremap J :m '>+1<CR>gv=gv
