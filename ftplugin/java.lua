@@ -3,6 +3,17 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local home_path = os.getenv('HOME')
 
+local function get_os_name()
+  local os_name = vim.loop.os_uname().sysname
+  if (os_name == 'Darwin') then
+    return 'mac'
+  else
+    return 'linux'
+  end
+end
+
+local configuration = home_path .. '/.local/share/java/jdt-language-server-1.9.0-202203031534/config_' .. get_os_name()
+
 local config = {
   cmd = {
     'java',
@@ -14,7 +25,7 @@ local config = {
     '-noverify',
     '-Xms1g',
     '-jar', home_path .. '/.local/share/java/jdt-language-server-1.9.0-202203031534/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
-    '-configuration', home_path .. '/.local/share/java/jdt-language-server-1.9.0-202203031534/config_mac',
+    '-configuration', configuration,
     '-data', home_path .. '/.cache/jdtls-workspace' .. project_name
   },
 
@@ -23,6 +34,4 @@ local config = {
 }
 
 require('jdtls').start_or_attach(config)
-
-local opts = { noremap=true, silent=true }
 
