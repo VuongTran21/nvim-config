@@ -12,7 +12,6 @@ local languageservers = {
   'eslint',
   'graphql',
   'jsonls',
-  'java_language_server',
   'sqlls',
   'svelte',
   'tailwindcss',
