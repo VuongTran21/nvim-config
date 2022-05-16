@@ -55,10 +55,6 @@ lua require("lsp")
 lua require("toggle-term")
 lua require("autopairs-config")
 lua require("whichkey-config")
-lua <<EOF
-    print('hello from lua')
-    print(vim.loop.os_uname().sysname)
-EOF
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
