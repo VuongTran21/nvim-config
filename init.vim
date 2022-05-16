@@ -75,6 +75,10 @@ nmap <leader>Y "+Y
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
+" enable global stausline
+set laststatus=3
+highlight WinSeparator guibg=None
+
 " install gcc for ubuntu to make c compilers available
 " install xsel to make * and + register work
 " note: remember to install language server when setting specific language in
