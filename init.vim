@@ -151,3 +151,4 @@ augroup END
 " install xsel to make * and + register work
 " note: remember to install language server when setting specific language in
 " lsp
+" npm install -g jest-vim-reporter ==> to run vim-test
