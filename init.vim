@@ -35,6 +35,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'sbdchd/neoformat'
+Plug 'vim-test/vim-test'
 
 call plug#end()
 
