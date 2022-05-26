@@ -4,7 +4,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'gruvbox-community/gruvbox'
 
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'akinsho/bufferline.nvim'
+" Plug 'akinsho/bufferline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'windwp/nvim-ts-autotag'
@@ -47,7 +47,7 @@ lua require("treesitter-config")
 lua require("nvim-tree-config")
 lua require("lualine-config")
 lua require("indent-blankline-config")
-lua require("bufferline-config")
+" lua require("bufferline-config")
 lua require("telescope-config")
 lua require("colorizer-config")
 lua require("gitsigns-config")
@@ -80,7 +80,11 @@ vnoremap <leader>d "_d
 set laststatus=3
 highlight WinSeparator guibg=None
 
+" enable winbar
+set winbar=%=%m\ %f
+set showtabline=0
 " install gcc for ubuntu to make c compilers available
 " install xsel to make * and + register work
 " note: remember to install language server when setting specific language in
 " lsp
+" Jump between your last 'position' with <Ctrl-O> and <Ctrl-i>
