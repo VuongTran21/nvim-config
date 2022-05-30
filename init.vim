@@ -81,10 +81,19 @@ set laststatus=3
 highlight WinSeparator guibg=None
 
 " enable winbar
-set winbar=%=%m\ %f
-set showtabline=0
 " install gcc for ubuntu to make c compilers available
 " install xsel to make * and + register work
 " note: remember to install language server when setting specific language in
 " lsp
 " Jump between your last 'position' with <Ctrl-O> and <Ctrl-i>
+
+lua << EOF
+
+if vim.fn.has('nvim-0.8') then
+  vim.cmd([[
+    set winbar=%=%m\ %f
+    set showtabline=0
+  ]])
+end
+
+EOF
