@@ -27,6 +27,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'onsails/lspkind.nvim'
 Plug 'terrortylor/nvim-comment'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 Plug 'mfussenegger/nvim-jdtls'
 
