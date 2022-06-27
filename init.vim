@@ -37,6 +37,8 @@ Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'sbdchd/neoformat'
 Plug 'vim-test/vim-test'
+Plug 'rmagatti/auto-session'
+Plug 'rmagatti/session-lens'
 
 call plug#end()
 
@@ -54,6 +56,7 @@ lua require("colorizer-config")
 lua require("gitsigns-config")
 lua require("nvim-comment")
 lua require("lsp")
+lua require("auto-session-config")
 lua require("toggle-term")
 lua require("autopairs-config")
 lua require("whichkey-config")

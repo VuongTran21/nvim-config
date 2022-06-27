@@ -38,3 +38,4 @@ vim.g.noswapfile = true
 vim.g.modifiable = true
 vim.opt.list = true
 vim.o.relativenumber = true
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
