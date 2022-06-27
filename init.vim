@@ -40,6 +40,8 @@ Plug 'vim-test/vim-test'
 Plug 'rmagatti/auto-session'
 Plug 'rmagatti/session-lens'
 
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 colorscheme gruvbox
