@@ -42,9 +42,17 @@ Plug 'rmagatti/session-lens'
 
 Plug 'tpope/vim-surround'
 
+" color scheme
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
+Plug 'lalitmee/cobalt2.nvim'
+
+" scrollbar
+Plug 'petertriho/nvim-scrollbar'
+
 call plug#end()
 
-colorscheme gruvbox
+" colorscheme gruvbox
 
 lua require("options")
 lua require("keybindings")
@@ -93,6 +101,7 @@ highlight WinSeparator guibg=None
 " lsp
 " Jump between your last 'position' with <Ctrl-O> and <Ctrl-i>
 
+lua require('colorbuddy').colorscheme('cobalt2')
 lua << EOF
 
 if vim.fn.has('nvim-0.8') then
@@ -101,5 +110,6 @@ if vim.fn.has('nvim-0.8') then
     set showtabline=0
   ]])
 end
+require("scrollbar").setup()
 
 EOF
