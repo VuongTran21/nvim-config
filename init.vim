@@ -103,13 +103,5 @@ highlight WinSeparator guibg=None
 
 lua require('colorbuddy').colorscheme('cobalt2')
 lua << EOF
-
-if vim.fn.has('nvim-0.8') then
-  vim.cmd([[
-    set winbar=%=%m\ %f
-    set showtabline=0
-  ]])
-end
 require("scrollbar").setup()
-
 EOF
